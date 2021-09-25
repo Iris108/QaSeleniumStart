@@ -28,11 +28,23 @@ public class StartSelenium {
         wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/home");
 
         WebElement element1 = wd.findElement(By.tagName("div"));
+        wd.findElement(By.tagName("div"));
+        wd.findElement(By.xpath("//div"));
+
+
         List<WebElement> list = wd.findElements(By.tagName("div"));
+
         WebElement element2 = wd.findElement(By.id("root"));
-        WebElement element3 = wd.findElement(By.className("container"));
+        wd.findElement(By.cssSelector("#root"));
+        wd.findElement(By.xpath("//*[@id='root']"));
+
+        WebElement element3 = wd.findElement(By.className("login_login__3EHKB"));
         System.out.println(list.size());
         WebElement elDiv2 = list.get(1);
+        wd.findElement(By.xpath("//*[@class='login_login__3EHKB']"));
+
+        wd.findElement(By.cssSelector(".container"));
+        wd.findElement(By.xpath("/*[@id= 'container']"));
     }
     @Test
     public  void loginTest(){
