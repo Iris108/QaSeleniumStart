@@ -17,12 +17,14 @@ public class LoginPhoneBook {
     @Test
     public void loginTest(){
         // open login form
+        wd.findElement(By.cssSelector("a[href='/login']")).click();
 
         // fill email
-type(By.cssSelector("[placeholder='email']"), "lolo@gmail.com");
+    type(By.cssSelector("[placeholder='Email']"), "lolo@gmail.com");
         //fill password
-
+    type(By.cssSelector("[placeholder='Password']"), "Ll123456$");
         // click login
+        wd.findElement(By.cssSelector("button")).click();
     }
     public  void type(By locator, String text){
         WebElement element = wd.findElement(locator);
